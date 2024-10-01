@@ -1,0 +1,172 @@
+@property --accent-color {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #ffc107;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "IBM Plex Sans", sans-serif;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding-bottom: 8rem;
+  padding-top: 8rem;
+}
+
+main {
+  flex: 1;
+}
+
+header {
+  margin-bottom: 3rem;
+}
+
+h1 {
+  font-weight: 400;
+  font-size: 5rem;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+h2 {
+  font-weight: 300;
+  font-size: 3rem;
+  margin-block-start: 0;
+  margin-block-end: 2rem;
+}
+
+h3 {
+  font-weight: 400;
+  font-size: 2.375rem;
+  position: relative;
+  display: inline-block;
+  padding-right: 2.5rem;
+  margin-block-start: 0;
+  margin-block-end: 2rem;
+}
+
+h3::after {
+  display: block;
+  content: "//";
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: var(--accent-color);
+}
+
+h4 {
+  margin-block-start: 0;
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+h5 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-block-start: 0;
+  margin-block-end: 1.25rem;
+}
+
+h6 {
+  font-size: 1.125rem;
+  font-style: italic;
+  margin-block-start: 0;
+  margin-block-end: 1rem;
+}
+
+p,
+a {
+  font-size: 1.125rem;
+  line-height: 2rem;
+}
+
+a,
+a:visited {
+  color: black;
+}
+
+ul {
+  max-width: 80%;
+  padding-left: 2rem;
+}
+
+li {
+  line-height: 1.5rem;
+  padding: 0.25rem 0;
+  font-size: 1.125rem;
+}
+
+main > section {
+  margin-block-end: 3rem;
+}
+
+h6 + ul {
+  margin-block-start: 0;
+}
+
+article {
+  margin-block-end: 4rem;
+}
+
+article section {
+  margin-block-start: 3rem;
+  margin-block-end: 3rem;
+}
+
+footer {
+  display: none;
+  margin-block-start: 5rem;
+  color: rgba(0, 0, 0, 0.75);
+  position: fixed;
+}
+
+.contact {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.contact > div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.contact svg {
+  fill: var(--accent-color);
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.contact span {
+  font-weight: 300;
+  font-size: 1.25rem;
+}
+
+@page {
+  size: A4;
+}
+
+@media print {
+  html {
+    font-size: 8px;
+  }
+
+  body {
+    padding-bottom: 0rem;
+    padding-top: 0rem;
+    max-width: auto;
+    width: 210mm;
+    height: 297mm;
+  }
+
+  article div {
+    break-inside: avoid;
+  }
+
+  footer {
+    display: block;
+  }
+}
